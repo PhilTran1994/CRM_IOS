@@ -1,0 +1,6 @@
+framework module Pods_crmIOS {
+  umbrella header "Pods-crmIOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

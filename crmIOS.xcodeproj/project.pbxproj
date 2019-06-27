@@ -7,21 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11280E5222C4A59A0053B6A8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11280E5122C4A59A0053B6A8 /* Constants.swift */; };
+		11280E5422C4A6CA0053B6A8 /* loginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11280E5322C4A6CA0053B6A8 /* loginVC.swift */; };
+		11280E5622C4C06E0053B6A8 /* mainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11280E5522C4C06E0053B6A8 /* mainVC.swift */; };
 		119C108322C46CD600CF87D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119C108222C46CD600CF87D5 /* AppDelegate.swift */; };
-		119C108522C46CD600CF87D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119C108422C46CD600CF87D5 /* ViewController.swift */; };
 		119C108822C46CD600CF87D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 119C108622C46CD600CF87D5 /* Main.storyboard */; };
 		119C108A22C46CD700CF87D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 119C108922C46CD700CF87D5 /* Assets.xcassets */; };
 		119C108D22C46CD700CF87D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 119C108B22C46CD700CF87D5 /* LaunchScreen.storyboard */; };
+		119C109D22C4766900CF87D5 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 119C109B22C4766900CF87D5 /* SWRevealViewController.m */; };
+		81705E5E817CD7BD2D931546 /* Pods_crmIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A736F769EAC00BC09B27D52 /* Pods_crmIOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11280E5122C4A59A0053B6A8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		11280E5322C4A6CA0053B6A8 /* loginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginVC.swift; sourceTree = "<group>"; };
+		11280E5522C4C06E0053B6A8 /* mainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainVC.swift; sourceTree = "<group>"; };
 		119C107F22C46CD600CF87D5 /* crmIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = crmIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		119C108222C46CD600CF87D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		119C108422C46CD600CF87D5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		119C108722C46CD600CF87D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		119C108922C46CD700CF87D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		119C108C22C46CD700CF87D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		119C108E22C46CD700CF87D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		119C109A22C4766900CF87D5 /* crmIOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "crmIOS-Bridging-Header.h"; sourceTree = "<group>"; };
+		119C109B22C4766900CF87D5 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		119C109C22C4766900CF87D5 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		7FBCE5A0ECB7CEA166BC719A /* Pods-crmIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-crmIOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-crmIOS/Pods-crmIOS.debug.xcconfig"; sourceTree = "<group>"; };
+		89D9D0A7AB135013E9C33201 /* Pods-crmIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-crmIOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-crmIOS/Pods-crmIOS.release.xcconfig"; sourceTree = "<group>"; };
+		8A736F769EAC00BC09B27D52 /* Pods_crmIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_crmIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81705E5E817CD7BD2D931546 /* Pods_crmIOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +53,8 @@
 			children = (
 				119C108122C46CD600CF87D5 /* crmIOS */,
 				119C108022C46CD600CF87D5 /* Products */,
+				9CF31241E73003505A57B8D4 /* Pods */,
+				A981574A5887C708A4513BDE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +69,84 @@
 		119C108122C46CD600CF87D5 /* crmIOS */ = {
 			isa = PBXGroup;
 			children = (
+				119C109922C4763500CF87D5 /* SupportingFiles */,
+				119C109822C46D5500CF87D5 /* Ultilities */,
+				119C109722C46D5100CF87D5 /* Services */,
+				119C109622C46D4B00CF87D5 /* Models */,
+				119C109522C46D4300CF87D5 /* Views */,
+				119C109422C46D3A00CF87D5 /* Controllers */,
 				119C108222C46CD600CF87D5 /* AppDelegate.swift */,
-				119C108422C46CD600CF87D5 /* ViewController.swift */,
 				119C108622C46CD600CF87D5 /* Main.storyboard */,
 				119C108922C46CD700CF87D5 /* Assets.xcassets */,
 				119C108B22C46CD700CF87D5 /* LaunchScreen.storyboard */,
 				119C108E22C46CD700CF87D5 /* Info.plist */,
 			);
 			path = crmIOS;
+			sourceTree = "<group>";
+		};
+		119C109422C46D3A00CF87D5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				11280E5322C4A6CA0053B6A8 /* loginVC.swift */,
+				11280E5522C4C06E0053B6A8 /* mainVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		119C109522C46D4300CF87D5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		119C109622C46D4B00CF87D5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		119C109722C46D5100CF87D5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		119C109822C46D5500CF87D5 /* Ultilities */ = {
+			isa = PBXGroup;
+			children = (
+				11280E5122C4A59A0053B6A8 /* Constants.swift */,
+			);
+			path = Ultilities;
+			sourceTree = "<group>";
+		};
+		119C109922C4763500CF87D5 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				119C109C22C4766900CF87D5 /* SWRevealViewController.h */,
+				119C109B22C4766900CF87D5 /* SWRevealViewController.m */,
+				119C109A22C4766900CF87D5 /* crmIOS-Bridging-Header.h */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		9CF31241E73003505A57B8D4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7FBCE5A0ECB7CEA166BC719A /* Pods-crmIOS.debug.xcconfig */,
+				89D9D0A7AB135013E9C33201 /* Pods-crmIOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A981574A5887C708A4513BDE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A736F769EAC00BC09B27D52 /* Pods_crmIOS.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +156,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 119C109122C46CD700CF87D5 /* Build configuration list for PBXNativeTarget "crmIOS" */;
 			buildPhases = (
+				EF227B2DE34C7604B52BBE9F /* [CP] Check Pods Manifest.lock */,
 				119C107B22C46CD600CF87D5 /* Sources */,
 				119C107C22C46CD600CF87D5 /* Frameworks */,
 				119C107D22C46CD600CF87D5 /* Resources */,
+				C121487B2EA5B90A05C06FE6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -96,6 +183,12 @@
 				TargetAttributes = {
 					119C107E22C46CD600CF87D5 = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -130,13 +223,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C121487B2EA5B90A05C06FE6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-crmIOS/Pods-crmIOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/TransitionButton/TransitionButton.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TransitionButton.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-crmIOS/Pods-crmIOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF227B2DE34C7604B52BBE9F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-crmIOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		119C107B22C46CD600CF87D5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				119C108522C46CD600CF87D5 /* ViewController.swift in Sources */,
+				11280E5222C4A59A0053B6A8 /* Constants.swift in Sources */,
+				11280E5422C4A6CA0053B6A8 /* loginVC.swift in Sources */,
 				119C108322C46CD600CF87D5 /* AppDelegate.swift in Sources */,
+				119C109D22C4766900CF87D5 /* SWRevealViewController.m in Sources */,
+				11280E5622C4C06E0053B6A8 /* mainVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,8 +425,10 @@
 		};
 		119C109222C46CD700CF87D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FBCE5A0ECB7CEA166BC719A /* Pods-crmIOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 98AJYC3SGH;
 				INFOPLIST_FILE = crmIOS/Info.plist;
@@ -291,6 +438,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hoanggiahan.democrm.crmIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "crmIOS/SupportingFiles/crmIOS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -298,8 +447,10 @@
 		};
 		119C109322C46CD700CF87D5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89D9D0A7AB135013E9C33201 /* Pods-crmIOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 98AJYC3SGH;
 				INFOPLIST_FILE = crmIOS/Info.plist;
@@ -309,6 +460,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hoanggiahan.democrm.crmIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "crmIOS/SupportingFiles/crmIOS-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
