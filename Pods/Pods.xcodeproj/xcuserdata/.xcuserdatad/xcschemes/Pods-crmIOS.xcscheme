@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "639FB75D5B28E8FCE6314FF211CA62F7"
+               BlueprintIdentifier = "B61EA3BDC307CE827A3B0636D2970BDB"
                BlueprintName = "Pods-crmIOS"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "Pods-crmIOS.framework">

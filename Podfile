@@ -13,4 +13,5 @@ target 'crmIOS' do
   pod 'Firebase/Core'
   pod 'Firebase/Messaging'
   pod 'TransitionButton'
+  pod 'IQKeyboardManagerSwift'
 end

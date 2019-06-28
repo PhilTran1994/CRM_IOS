@@ -130,6 +130,8 @@
                     </view>
                     <connections>
                         <outlet property="loginBtn" destination="fB6-Tc-AgA" id="L39-Da-bQq"/>
+                        <outlet property="passTxt" destination="uM7-n1-bGf" id="208-w1-vEV"/>
+                        <outlet property="usernameTxt" destination="qDQ-q1-LEm" id="k1O-Fi-YPQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7xO-pr-hl1" userLabel="First Responder" sceneMemberID="firstResponder"/>

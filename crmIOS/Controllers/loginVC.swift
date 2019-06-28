@@ -7,10 +7,13 @@
 //
 import TransitionButton
 import UIKit
+import Alamofire
 
 class loginVC: UIViewController {
 
     @IBOutlet weak var loginBtn: TransitionButton!
+    @IBOutlet weak var usernameTxt: UITextField!
+    @IBOutlet weak var passTxt: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -18,6 +21,27 @@ class loginVC: UIViewController {
     
     @IBAction func loginBtnPressed(_ sender: Any) {
         loginBtn.startAnimation()
+        let qualityOfServiceClass = DispatchQoS.QoSClass.background
+        let backgroundQueue = DispatchQueue.global(qos: qualityOfServiceClass)
+        backgroundQueue.async {
+            guard let usern = self.usernameTxt.text, self.usernameTxt.text != "" else { return }
+            guard let pass = self.passTxt.text, self.passTxt.text != "" else { return }
+            AuthService.instance.userLogin(username: usern, password: pass, completion: { (success) in
+                if success {
+                    print("logged In")
+                    AuthService.instance.getToken(username: usern, password: pass, completion: {
+                        (success) in
+                        debugPrint(success)
+                        
+                    })
+                    self.loginBtn.stopAnimation(animationStyle: .expand, completion: {
+                        print("done")
+                    })
+                } else {
+                    print("error")
+                }
+            })
+        }
     }
     
     @IBAction func buttonAction(_ button: TransitionButton) {
