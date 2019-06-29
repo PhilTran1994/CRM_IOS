@@ -82,12 +82,23 @@ class AuthService {
                 let token = json?["access_token"].stringValue
                 let expires = json?[".expires"].stringValue
                 let dateFormatter = DateFormatter()
-                let date: Date = Date()
-                let formattedDate  = dateFormatter.date(from: expires!)
-
-                debugPrint(token)
+                dateFormatter.dateFormat = "EEE, dd MMM yyyy HH':'mm':'ss 'GMT'"
+                dateFormatter.timeZone  = NSTimeZone(name: "GMT") as TimeZone?
+                var rec = ""
+                for charac in expires! {
+                    debugPrint(charac)
+                    let record = rec + String(charac)
+                    rec = record
+                }
+                let date = NSDate()
+                let formattedDate  = dateFormatter.date(from: rec)
+                let toDate = dateFormatter.date(from: "Sun, 27 Oct 2019 03:54:26 GMT")
+                debugPrint(token as Any)
+                debugPrint(expires as Any)
+                debugPrint(rec)
+                debugPrint(toDate as Any)
                 debugPrint(date)
-                debugPrint(formattedDate)
+                debugPrint(formattedDate as Any)
             }
         }
     }
