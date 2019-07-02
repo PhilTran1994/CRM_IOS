@@ -11,7 +11,9 @@ target 'crmIOS' do
   pod 'Alamofire'
   pod 'SwiftyJSON', '~> 4.0'
   pod 'Firebase/Core'
+  pod 'Firebase/Analytics'
   pod 'Firebase/Messaging'
+  pod 'FirebaseInstanceID', '~> 3.8'
   pod 'TransitionButton'
   pod 'IQKeyboardManagerSwift'
 end

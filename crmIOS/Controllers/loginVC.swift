@@ -20,49 +20,39 @@ class loginVC: UIViewController {
     }
     
     @IBAction func loginBtnPressed(_ sender: Any) {
-        loginBtn.startAnimation()
-        let qualityOfServiceClass = DispatchQoS.QoSClass.background
-        let backgroundQueue = DispatchQueue.global(qos: qualityOfServiceClass)
-        backgroundQueue.async {
-            guard let usern = self.usernameTxt.text, self.usernameTxt.text != "" else { return }
-            guard let pass = self.passTxt.text, self.passTxt.text != "" else { return }
-            AuthService.instance.userLogin(username: usern, password: pass, completion: { (success) in
-                if success {
-                    print("logged In")
-                    AuthService.instance.getToken(username: usern, password: pass, completion: {
-                        (success) in
-                        debugPrint(success)
-                        
-                    })
-                    self.loginBtn.stopAnimation(animationStyle: .expand, completion: {
-                        print("done")
-                    })
-                } else {
-                    print("error")
-                }
-            })
-        }
-    }
-    
-    @IBAction func buttonAction(_ button: TransitionButton) {
-        button.startAnimation() // 2: Then start the animation when the user tap the button
-        let qualityOfServiceClass = DispatchQoS.QoSClass.background
-        let backgroundQueue = DispatchQueue.global(qos: qualityOfServiceClass)
-        backgroundQueue.async(execute: {
+        if(self.usernameTxt.text == "" || self.passTxt.text == "") {
+            let alert = UIAlertController(title: "Thông báo", message: "Vui lòng điền đủ thông tin", preferredStyle: UIAlertController.Style.alert)
             
-            sleep(3) // 3: Do your networking task or background work here.
+            // add an action (button)
+            alert.addAction(UIAlertAction(title: "Đóng", style: UIAlertAction.Style.default, handler: nil))
             
-            DispatchQueue.main.async(execute: { () -> Void in
-                // 4: Stop the animation, here you have three options for the `animationStyle` property:
-                // .expand: useful when the task has been compeletd successfully and you want to expand the button and transit to another view controller in the completion callback
-                // .shake: when you want to reflect to the user that the task did not complete successfly
-                // .normal
-                button.stopAnimation(animationStyle: .expand, completion: {
-                    let secondVC = UIViewController()
-                    self.present(secondVC, animated: true, completion: nil)
+            // show the alert
+            self.present(alert, animated: true, completion: nil)
+        } else {
+            loginBtn.startAnimation()
+            let qualityOfServiceClass = DispatchQoS.QoSClass.background
+            let backgroundQueue = DispatchQueue.global(qos: qualityOfServiceClass)
+            backgroundQueue.sync {
+                guard let usern = self.usernameTxt.text, self.usernameTxt.text != "" else { return }
+                guard let pass = self.passTxt.text, self.passTxt.text != "" else { return }
+                AuthService.instance.userLogin(username: usern, password: pass, completion: { (success) in
+                    if success {
+                        print("logged In")
+                        AuthService.instance.getToken(username: usern, password: pass, completion: {
+                            (success) in
+                            debugPrint(success)
+                           
+                        })
+                        self.loginBtn.stopAnimation(animationStyle: .expand, completion: {
+                            print("Animation stopped")
+                        })
+                    } else {
+                        print("error")
+                    }
                 })
-            })
-        })
+            }
+            
+        }
     }
 
 }

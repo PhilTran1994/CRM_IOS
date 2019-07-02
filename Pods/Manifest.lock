@@ -1,5 +1,7 @@
 PODS:
   - Alamofire (4.8.2)
+  - Firebase/Analytics (5.20.2):
+    - Firebase/Core
   - Firebase/Core (5.20.2):
     - Firebase/CoreOnly
     - FirebaseAnalytics (= 5.8.1)
@@ -69,8 +71,10 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - Firebase/Analytics
   - Firebase/Core
   - Firebase/Messaging
+  - FirebaseInstanceID (~> 3.8)
   - IQKeyboardManagerSwift
   - SwiftyJSON (~> 4.0)
   - TransitionButton
@@ -108,6 +112,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
   TransitionButton: fb271583d9c9e4bb116b97103047e5157653f233
 
-PODFILE CHECKSUM: 177788f87e0da6f1ffbea397e90e3958956c14dd
+PODFILE CHECKSUM: 2153669530941f3768ca0d80b539d24d35b84443
 
 COCOAPODS: 1.5.2

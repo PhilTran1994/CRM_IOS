@@ -10,6 +10,7 @@
 		11280E5222C4A59A0053B6A8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11280E5122C4A59A0053B6A8 /* Constants.swift */; };
 		11280E5422C4A6CA0053B6A8 /* loginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11280E5322C4A6CA0053B6A8 /* loginVC.swift */; };
 		11280E5622C4C06E0053B6A8 /* mainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11280E5522C4C06E0053B6A8 /* mainVC.swift */; };
+		1142DA7A22CB3EC4001D25DC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1142DA7922CB3EC4001D25DC /* GoogleService-Info.plist */; };
 		119C108322C46CD600CF87D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119C108222C46CD600CF87D5 /* AppDelegate.swift */; };
 		119C108822C46CD600CF87D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 119C108622C46CD600CF87D5 /* Main.storyboard */; };
 		119C108A22C46CD700CF87D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 119C108922C46CD700CF87D5 /* Assets.xcassets */; };
@@ -23,6 +24,8 @@
 		11280E5122C4A59A0053B6A8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		11280E5322C4A6CA0053B6A8 /* loginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginVC.swift; sourceTree = "<group>"; };
 		11280E5522C4C06E0053B6A8 /* mainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainVC.swift; sourceTree = "<group>"; };
+		1142DA7922CB3EC4001D25DC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1142DA7B22CB4723001D25DC /* crmIOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = crmIOS.entitlements; sourceTree = "<group>"; };
 		119C107F22C46CD600CF87D5 /* crmIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = crmIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		119C108222C46CD600CF87D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		119C108722C46CD600CF87D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -71,6 +74,8 @@
 		119C108122C46CD600CF87D5 /* crmIOS */ = {
 			isa = PBXGroup;
 			children = (
+				1142DA7B22CB4723001D25DC /* crmIOS.entitlements */,
+				1142DA7922CB3EC4001D25DC /* GoogleService-Info.plist */,
 				119C109922C4763500CF87D5 /* SupportingFiles */,
 				119C109822C46D5500CF87D5 /* Ultilities */,
 				119C109722C46D5100CF87D5 /* Services */,
@@ -191,6 +196,9 @@
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
+							com.apple.Push = {
+								enabled = 1;
+							};
 						};
 					};
 				};
@@ -219,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				119C108D22C46CD700CF87D5 /* LaunchScreen.storyboard in Resources */,
+				1142DA7A22CB3EC4001D25DC /* GoogleService-Info.plist in Resources */,
 				119C108A22C46CD700CF87D5 /* Assets.xcassets in Resources */,
 				119C108822C46CD600CF87D5 /* Main.storyboard in Resources */,
 			);
@@ -435,6 +444,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = crmIOS/crmIOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 98AJYC3SGH;
 				INFOPLIST_FILE = crmIOS/Info.plist;
@@ -457,6 +467,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = crmIOS/crmIOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 98AJYC3SGH;
 				INFOPLIST_FILE = crmIOS/Info.plist;

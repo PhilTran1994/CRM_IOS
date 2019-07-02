@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>51508255648-npl21j3tcruop06oa0dfsnea857b7o3t.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.51508255648-npl21j3tcruop06oa0dfsnea857b7o3t</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDyPkg_rLMvebxHlNEsrNUK-siZ7jLMNaw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>51508255648</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.hoanggiahan.democrm.crmIOS</string>
+	<key>PROJECT_ID</key>
+	<string>hondacrm-5b176</string>
+	<key>STORAGE_BUCKET</key>
+	<string>hondacrm-5b176.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:51508255648:ios:8fa04d9b88a21b69</string>
+	<key>DATABASE_URL</key>
+	<string>https://hondacrm-5b176.firebaseio.com</string>
+</dict>
+</plist>
