@@ -41,7 +41,10 @@ class loginVC: UIViewController {
                         AuthService.instance.getToken(username: usern, password: pass, completion: {
                             (success) in
                             debugPrint(success)
-                           
+                           print("got token")
+                            self.loginBtn.stopAnimation(animationStyle: .expand, completion: {
+                                print("Animation stopped")
+                            })
                         })
                         self.loginBtn.stopAnimation(animationStyle: .expand, completion: {
                             print("Animation stopped")
