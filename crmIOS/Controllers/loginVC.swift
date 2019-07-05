@@ -14,20 +14,16 @@ class loginVC: UIViewController {
     @IBOutlet weak var loginBtn: TransitionButton!
     @IBOutlet weak var usernameTxt: UITextField!
     @IBOutlet weak var passTxt: UITextField!
+    @IBOutlet weak var errorTxt: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
     
     }
     
     @IBAction func loginBtnPressed(_ sender: Any) {
+        errorTxt.text = ""
         if(self.usernameTxt.text == "" || self.passTxt.text == "") {
-            let alert = UIAlertController(title: "Thông báo", message: "Vui lòng điền đủ thông tin", preferredStyle: UIAlertController.Style.alert)
-            
-            // add an action (button)
-            alert.addAction(UIAlertAction(title: "Đóng", style: UIAlertAction.Style.default, handler: nil))
-            
-            // show the alert
-            self.present(alert, animated: true, completion: nil)
+            errorTxt.text = "Không đủ thông tin đăng nhập"
         } else {
             loginBtn.startAnimation()
             let qualityOfServiceClass = DispatchQoS.QoSClass.background
@@ -42,15 +38,16 @@ class loginVC: UIViewController {
                             (success) in
                             debugPrint(success)
                            print("got token")
-                            self.loginBtn.stopAnimation(animationStyle: .expand, completion: {
-                                print("Animation stopped")
-                            })
                         })
                         self.loginBtn.stopAnimation(animationStyle: .expand, completion: {
-                            print("Animation stopped")
+                            print("Animation 1 stopped")
                         })
                     } else {
-                        print("error")
+                        print(success)
+                        self.loginBtn.stopAnimation(animationStyle: .shake, completion: {
+                            print("Animation 2 stopped")
+                            self.errorTxt.text = "Sai thông tin đăng nhập"
+                        })
                     }
                 })
             }

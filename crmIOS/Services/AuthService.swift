@@ -38,6 +38,25 @@ class AuthService {
             return defaults.set(newValue, forKey: USER_NAME)
         }
     }
+    func convertDateFormatter(date: String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEE, dd MMM yyyy HH':'mm':'ss 'GMT'"
+        dateFormatter.timeZone = NSTimeZone(name: "GMT") as TimeZone?
+        dateFormatter.locale = Locale(identifier: Calendar.current.timeZone.identifier)
+        let convertedDate = dateFormatter.date(from: date)
+        
+        guard dateFormatter.date(from: date) != nil else {
+            assert(false, "no date from string")
+            return ""
+        }
+        
+        dateFormatter.dateFormat = "dd/MM/YYYY HH':'mm':'ss "///this is what you want to convert format
+        dateFormatter.timeZone = NSTimeZone(name: "UTC") as TimeZone?
+        dateFormatter.locale = Locale(identifier: Calendar.current.timeZone.identifier)
+        let timeStamp = dateFormatter.string(from: convertedDate!)
+        
+        return timeStamp
+    }
     func userLogin(username : String, password : String, completion:
         @escaping CompletionHandler) {
         let lowerUsername = username.lowercased()
@@ -47,23 +66,22 @@ class AuthService {
         ]
         Alamofire.request(LOGIN_URL, method: .post, parameters: body,
                           encoding: JSONEncoding.default,headers: header).responseJSON
-            { (response) in
-                if response.error == nil {
-                    guard let data = response.data  else { return }
-                    let json = try? JSON(data: data)
-                    let success = json?["Success"].boolValue
-                    if(success == true) {
-                        debugPrint("Đã vào")
-                        self.isLoggedIn = true
-                        completion(true)
-                    } else {
-                        self.isLoggedIn = false
-                        completion(false)
-                    }
-                    
+        { (response) in
+            if response.error == nil {
+                guard let data = response.data  else { return }
+                let json = try? JSON(data: data)
+                let success = json?["Success"].boolValue
+                if(success == true) {
+                    self.isLoggedIn = true
+                    completion(true)
                 } else {
+                    self.isLoggedIn = false
                     completion(false)
-                    debugPrint(response.error as Any)
+                }
+                
+            } else {
+                completion(false)
+                debugPrint(response.error as Any)
             }
         }
     }
@@ -85,19 +103,24 @@ class AuthService {
                 dateFormatter.dateFormat = "EEE, dd MMM yyyy HH':'mm':'ss 'GMT'"
                 dateFormatter.timeZone  = NSTimeZone(name: "GMT") as TimeZone?
                 var rec = ""
+                var tokRec = ""
+                let todayDate = NSDate()
                 for charac in expires! {
-                    debugPrint(charac)
                     let record = rec + String(charac)
                     rec = record
                 }
-                let date = NSDate()
+                for tok in token! {
+                    let record = tokRec + String(tok)
+                    tokRec = record
+                }
                 let formattedDate  = dateFormatter.date(from: rec)
-                let toDate = dateFormatter.date(from: "Sun, 27 Oct 2019 03:54:26 GMT")
-                debugPrint(token as Any)
-                debugPrint(expires as Any)
-                debugPrint(rec)
-                debugPrint(toDate as Any)
-                debugPrint(date)
+                let convertedDate = self.convertDateFormatter(date: rec)
+                if (token != nil && token != "" ) {
+                    self.defaults.set(tokRec, forKey: "access_token" )
+                    debugPrint(self.defaults.string(forKey: "access_token") ?? "Test")
+                }
+                debugPrint(todayDate)
+                debugPrint(convertedDate)
                 debugPrint(formattedDate as Any)
             }
         }
