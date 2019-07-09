@@ -57,6 +57,32 @@ class AuthService {
         
         return timeStamp
     }
+    func checkLogin() -> Bool {
+        debugPrint("Check token----------------------------------------------------------")
+        if(self.defaults.string(forKey: "access_token") != nil ) {
+            if(self.defaults.string(forKey: "expires") != nil) {
+                debugPrint("The token-----------------------------------------------------------------------------------")
+                let toDay = NSDate()
+                let dateLocal = self.defaults.string(forKey: "expires")
+                var dateLocalString = ""
+                for charac in dateLocal ?? "" {
+                    let record = dateLocalString + String(charac)
+                    dateLocalString = record
+                    debugPrint(dateLocalString)
+                }
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "EEE, dd MMM yyyy HH':'mm':'ss 'GMT'"
+                dateFormatter.timeZone  = NSTimeZone(name: "GMT") as TimeZone?
+                let dateInLocal = dateFormatter.date(from: dateLocalString)
+                debugPrint(self.defaults.string(forKey: "expires") ?? "Test")
+                return ((dateInLocal as! Date) > toDay as Date)
+            } else {
+                return false
+            }
+        } else {
+           return false
+        }
+    }
     func userLogin(username : String, password : String, completion:
         @escaping CompletionHandler) {
         let lowerUsername = username.lowercased()
@@ -117,7 +143,9 @@ class AuthService {
                 let convertedDate = self.convertDateFormatter(date: rec)
                 if (token != nil && token != "" ) {
                     self.defaults.set(tokRec, forKey: "access_token" )
+                    self.defaults.set(rec,forKey: "expires")
                     debugPrint(self.defaults.string(forKey: "access_token") ?? "Test")
+                    debugPrint(self.defaults.string(forKey: "expires") ?? "Test1")
                 }
                 debugPrint(todayDate)
                 debugPrint(convertedDate)

@@ -141,26 +141,62 @@
                         <outlet property="loginBtn" destination="fB6-Tc-AgA" id="L39-Da-bQq"/>
                         <outlet property="passTxt" destination="uM7-n1-bGf" id="208-w1-vEV"/>
                         <outlet property="usernameTxt" destination="qDQ-q1-LEm" id="k1O-Fi-YPQ"/>
+                        <segue destination="TVS-ar-LGo" kind="show" identifier="toDashboard" id="vV5-kb-x27"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7xO-pr-hl1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="860" y="427.73613193403304"/>
         </scene>
-        <!--View Controller-->
+        <!--DashboardVC-->
         <scene sceneID="4wF-A5-iaq">
             <objects>
-                <viewController id="TVS-ar-LGo" sceneMemberID="viewController">
+                <viewController id="TVS-ar-LGo" customClass="dashboardVC" customModule="crmIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oqN-HS-ktZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UmE-s2-3Z2">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wDb-RK-X4N">
+                                        <rect key="frame" x="10" y="25" width="35" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="35" id="1OP-Cs-lrT"/>
+                                            <constraint firstAttribute="height" constant="35" id="M38-qn-Oka"/>
+                                        </constraints>
+                                        <state key="normal" image="hamburgerIcon"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Màn hình chính" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m0Y-ox-fkZ">
+                                        <rect key="frame" x="129.5" y="32" width="116.5" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="m0Y-ox-fkZ" firstAttribute="centerX" secondItem="UmE-s2-3Z2" secondAttribute="centerX" id="3xt-lS-vkl"/>
+                                    <constraint firstAttribute="bottom" secondItem="wDb-RK-X4N" secondAttribute="bottom" constant="20" id="MCk-GT-pYW"/>
+                                    <constraint firstItem="m0Y-ox-fkZ" firstAttribute="centerY" secondItem="wDb-RK-X4N" secondAttribute="centerY" id="abB-BD-KHZ"/>
+                                    <constraint firstItem="wDb-RK-X4N" firstAttribute="leading" secondItem="UmE-s2-3Z2" secondAttribute="leading" constant="10" id="bAh-nc-EGM"/>
+                                    <constraint firstAttribute="height" constant="80" id="w6x-WR-DRl"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UmE-s2-3Z2" firstAttribute="leading" secondItem="srK-BU-8eC" secondAttribute="leading" id="EEA-dK-ecV"/>
+                            <constraint firstItem="UmE-s2-3Z2" firstAttribute="top" secondItem="oqN-HS-ktZ" secondAttribute="top" id="NPQ-Nx-Gbf"/>
+                            <constraint firstItem="srK-BU-8eC" firstAttribute="trailing" secondItem="UmE-s2-3Z2" secondAttribute="trailing" id="Ofh-JY-Tsv"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="srK-BU-8eC"/>
                     </view>
+                    <navigationItem key="navigationItem" id="iaF-Z5-3HC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gXe-7v-xls" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1614" y="428"/>
+            <point key="canvasLocation" x="1613.5999999999999" y="427.73613193403304"/>
         </scene>
         <!--MainVC-->
         <scene sceneID="Ecm-wo-eKu">
@@ -179,6 +215,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="hamburgerIcon" width="30" height="30"/>
         <image name="vtq-logo" width="625" height="313"/>
     </resources>
 </document>

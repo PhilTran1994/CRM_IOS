@@ -17,7 +17,13 @@ class loginVC: UIViewController {
     @IBOutlet weak var errorTxt: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        let check = AuthService.instance.checkLogin()
+        if(check == true) {
+            debugPrint("-----------------------logged in------------------------------")
+            performSegue(withIdentifier: TO_DASHBOARD, sender: nil)
+        } else {
+            debugPrint("-----------------------logged in failed------------------------------")
+        }
     }
     
     @IBAction func loginBtnPressed(_ sender: Any) {
@@ -34,9 +40,11 @@ class loginVC: UIViewController {
                 AuthService.instance.userLogin(username: usern, password: pass, completion: { (success) in
                     if success {
                         print("logged In")
+                       
                         AuthService.instance.getToken(username: usern, password: pass, completion: {
                             (success) in
                             debugPrint(success)
+                            self.performSegue(withIdentifier: TO_DASHBOARD, sender: nil)
                            print("got token")
                         })
                         self.loginBtn.stopAnimation(animationStyle: .expand, completion: {

@@ -16,6 +16,7 @@
 		119C108A22C46CD700CF87D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 119C108922C46CD700CF87D5 /* Assets.xcassets */; };
 		119C108D22C46CD700CF87D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 119C108B22C46CD700CF87D5 /* LaunchScreen.storyboard */; };
 		119C109D22C4766900CF87D5 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 119C109B22C4766900CF87D5 /* SWRevealViewController.m */; };
+		119D404E22D057AC00BFEAD7 /* dashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119D404D22D057AC00BFEAD7 /* dashboardVC.swift */; };
 		11F19DAE22C5CFA200EF71FB /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F19DAD22C5CFA200EF71FB /* AuthService.swift */; };
 		81705E5E817CD7BD2D931546 /* Pods_crmIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A736F769EAC00BC09B27D52 /* Pods_crmIOS.framework */; };
 /* End PBXBuildFile section */
@@ -35,6 +36,7 @@
 		119C109A22C4766900CF87D5 /* crmIOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "crmIOS-Bridging-Header.h"; sourceTree = "<group>"; };
 		119C109B22C4766900CF87D5 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		119C109C22C4766900CF87D5 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		119D404D22D057AC00BFEAD7 /* dashboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dashboardVC.swift; sourceTree = "<group>"; };
 		11F19DAD22C5CFA200EF71FB /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		7FBCE5A0ECB7CEA166BC719A /* Pods-crmIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-crmIOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-crmIOS/Pods-crmIOS.debug.xcconfig"; sourceTree = "<group>"; };
 		89D9D0A7AB135013E9C33201 /* Pods-crmIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-crmIOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-crmIOS/Pods-crmIOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			children = (
 				11280E5322C4A6CA0053B6A8 /* loginVC.swift */,
 				11280E5522C4C06E0053B6A8 /* mainVC.swift */,
+				119D404D22D057AC00BFEAD7 /* dashboardVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				11280E5422C4A6CA0053B6A8 /* loginVC.swift in Sources */,
 				119C108322C46CD600CF87D5 /* AppDelegate.swift in Sources */,
 				11F19DAE22C5CFA200EF71FB /* AuthService.swift in Sources */,
+				119D404E22D057AC00BFEAD7 /* dashboardVC.swift in Sources */,
 				119C109D22C4766900CF87D5 /* SWRevealViewController.m in Sources */,
 				11280E5622C4C06E0053B6A8 /* mainVC.swift in Sources */,
 			);

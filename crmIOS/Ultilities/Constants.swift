@@ -26,6 +26,7 @@ let CHECK_REMINDER_CUSTOMER_URL = "\(BASE_URL)/Json/CheckReminderCustomer"
 //Segues
 let TO_LOGIN = "toLogin"
 let TO_MAIN = "toMain"
+let TO_DASHBOARD = "toDashboard"
 
 //user Defeaults
 let TOKEN_KEY = "token"
